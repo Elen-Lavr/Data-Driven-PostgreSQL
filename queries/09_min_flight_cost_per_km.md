@@ -14,7 +14,7 @@ select min (tf.amount / round((point(a.longitude, a.latitude) <@> point(b.longit
 from flights f
 join airports a on a.airport_code = f.departure_airport
 join airports b on b.airport_code = f.arrival_airport
-join ticket_flights tf on tf.flight_id=f.flight_id
+join ticket_flights tf on tf.flight_id=f.flight_id;
 ```
 ### :heavy_check_mark: Результат выполнения
 
