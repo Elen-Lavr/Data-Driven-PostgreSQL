@@ -34,7 +34,7 @@ _:memo: SQL запросы с решениями и результатами:_
 </tr> 
 <tr>
     <td rowspan="4">Финансовые метрики флота</td>
-    <td rowspan="4">JOIN, GROUP BY, HAVING, COUNT(), ARRAY_AGG(), ARRAY, @>, DATE_TRUNC(), SUM(), LAG(), OVER(), ROUND(), CASE WHEN, Подзапрос WITH (CTE), PERCENTILE_CONT(), WITHIN GROUP, Кросс-соединение, CREATE EXTENSION, MIN(), <@>, POINT()</td>
+    <td rowspan="4">JOIN, GROUP BY, HAVING, COUNT(), ARRAY_AGG(), ARRAY, @>, DATE_TRUNC(), SUM(), LAG(), OVER(), ROUND(), CASE WHEN, Подзапрос, WITH (CTE), PERCENTILE_CONT(), WITHIN GROUP, Кросс-соединение, CREATE EXTENSION, MIN(), <@>, POINT()</td>
     <td>📁 <a href="./queries/02_percent_change_monthly_bookings.md">просмотреть</a></td>
 </tr>
 <tr>
