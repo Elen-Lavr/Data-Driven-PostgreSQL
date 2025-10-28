@@ -26,7 +26,7 @@ _:memo: SQL запросы с решениями и результатами:_
 </tr>
 <tr>
     <td rowspan="2">Анализ воздушного флота</td>
-    <td rowspan="2">JOIN, GROUP BY, HAVING, COUNT(), ARRAY_AGG(), ARRAY, @></td>
+    <td rowspan="2">Объединить, группировать по, иметь, count(), array_agg(), массив, , @></td>
     <td>Выведите название самолетов, которые имеют менее 50 посадочных мест</td>
     <td> <a href="./queries/01_aircrafts_less_50_seats.md">📁 просмотреть</a></td>
 </tr>
@@ -36,7 +36,8 @@ _:memo: SQL запросы с решениями и результатами:_
 </tr> 
 <tr>
     <td rowspan="4">Финансовые метрики флота</td>
-    <td rowspan="4">JOIN, GROUP BY, HAVING, COUNT(), ARRAY_AGG(), ARRAY, @>, DATE_TRUNC(), SUM(), LAG(), OVER(), ROUND(), CASE WHEN, Подзапрос, WITH (CTE), PERCENTILE_CONT(), WITHIN GROUP, Кросс-соединение, CREATE EXTENSION, MIN(), <@>, POINT()</td>
+    <td rowspan="4">Join, group by, having, count(), array_agg(), array, @>, date_trunc(), sum(), lag(), over(), round(), case when, подзапрос, with (cte), percentile_cont(), within group, кросс-соединение, create extension, min(), <@>, point()</td>
+    <td>Классифицируйте финансовые обороты по маршрутам: low/middle/high</td>
     <td>📁 <a href="./queries/02_percent_change_monthly_bookings.md">просмотреть</a></td>
 </tr>
 <tr>
@@ -53,19 +54,19 @@ _:memo: SQL запросы с решениями и результатами:_
 </tr>
  <tr>
     <td rowspan="1">Операционная эффективность</td>
-    <td rowspan="1">WITH (CTE), COUNT(), OVER (PARTITION BY), LEFT JOIN, WHERE, GROUP BY, SUM(), OVER (PARTITION BY ORDER BY), JOIN</td>
+    <td rowspan="1">With (cte), count(), over (partition by), left join, where, group by, sum(), over (partition by order by), join</td>
     <td>Вывести накопительный итог количества мест в самолетах по каждому аэропорту на каждый день...</td>
     <td>📁 <a href="./queries/04_cumulative_empty_seats_daily.md">просмотреть</a></td>
 </tr>
  <tr>
     <td rowspan="1">Статистика по маршрутам</td>
-    <td rowspan="1">DISTINCT, COUNT() OVER (PARTITION BY), JOIN, Window functions, Агрегатные функции с окнами</td>
+    <td rowspan="1">Distinct, count() over (partition by), join, window functions, агрегатные функции с окнами</td>
     <td>Найдите процентное соотношение перелетов по маршрутам от общего количества перелетов. Решение через оконную функцию</td>
     <td>📁 <a href="./queries/05_route_flight_percentage.md">просмотреть</a></td>
 </tr>
  <tr>
     <td rowspan="1">CRM-аналитика</td>
-    <td rowspan="1">Подзапрос, ->> (извлечение JSON), SUBSTRING(), GROUP BY, COUNT()</td>
+    <td rowspan="1">Подзапрос, ->> (извлечение json), substring(), group by, count()</td>
     <td>Выведите количество пассажиров по каждому коду сотового оператора</td>
     <td>📁 <a href="./queries/06_passengers_by_operator_code.md">просмотреть</a></td>
 </tr>
