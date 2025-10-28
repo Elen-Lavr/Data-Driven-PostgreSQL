@@ -1,4 +1,6 @@
-# aviation-transportation-SQL-analytics
+<img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="28"> &nbsp; [![Taplink](https://img.shields.io/badge/Давайте_работать_вместе!-Taplink-FF69B4?style=for-the-badge&logo=linktree)](https://lawlena.taplink.ws)
+
+# Aviation-transportation-SQL-analytics
 
 _:airplane:  Этот репозиторий содержит решения практических кейсов по анализу данных в сфере авиаперевозок:_
   * Анализ воздушного флота: фильтрация и агрегация данных о самолетах;
