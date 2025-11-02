@@ -15,6 +15,112 @@ _:toolbox:  Используемые технологии:_
 
 _:books: Исходные [данные](./data/avia.backup) и [описание](./data/bookings.pdf) базы данных Авиаперевозки._
 
+_:card_file_box: Схема базы данных_
+
+```mermaid
+erDiagram
+    BOOKINGS {
+        varchar book_ref PK
+        timestamp book_date
+        numeric total_amount
+    }
+    
+    TICKETS {
+        varchar ticket_no PK
+        varchar book_ref FK
+        varchar passenger_id
+        varchar passenger_name
+        json contact_data
+    }
+    
+    AIRCRAFTS {
+        varchar aircraft_code PK
+        varchar model
+        numeric range
+    }
+    
+    AIRPORTS {
+        varchar airport_code PK
+        varchar airport_name
+        varchar city
+        numeric longitude
+        numeric latitude
+        varchar timezone
+    }
+    
+    FLIGHTS {
+        integer flight_id PK
+        varchar flight_no
+        timestamp scheduled_departure
+        timestamp scheduled_arrival
+        varchar departure_airport FK
+        varchar arrival_airport FK
+        varchar status
+        varchar aircraft_code FK
+        timestamp actual_departure
+        timestamp actual_arrival
+    }
+    
+    TICKET_FLIGHTS {
+        varchar ticket_no FK
+        integer flight_id FK
+        varchar fare_conditions
+        numeric amount
+    }
+    
+    BOARDING_PASSES {
+        varchar ticket_no FK
+        integer flight_id FK
+        integer boarding_no
+        varchar seat_no
+    }
+    
+    ROUTES {
+        varchar flight_no
+        varchar departure_airport
+        varchar departure_airport_name
+        varchar departure_city
+        varchar arrival_airport
+        varchar arrival_airport_name
+        varchar arrival_city
+        varchar aircraft_code
+        interval duration
+        integer[] days_of_week
+    }
+    
+    FLIGHTS_V {
+        integer flight_id
+        varchar flight_no
+        timestamp scheduled_departure
+        timestamp scheduled_departure_local
+        timestamp scheduled_arrival
+        timestamp scheduled_arrival_local
+        interval scheduled_duration
+        varchar departure_airport
+        varchar departure_airport_name
+        varchar departure_city
+        varchar arrival_airport
+        varchar arrival_airport_name
+        varchar arrival_city
+        varchar status
+        varchar aircraft_code
+        timestamp actual_departure
+        timestamp actual_departure_local
+        timestamp actual_arrival
+        timestamp actual_arrival_local
+        interval actual_duration
+    }
+
+    BOOKINGS ||--o{ TICKETS : contains
+    TICKETS ||--o{ TICKET_FLIGHTS : includes
+    FLIGHTS ||--o{ TICKET_FLIGHTS : operates
+    AIRCRAFTS ||--o{ FLIGHTS : assigned_to
+    AIRPORTS ||--o{ FLIGHTS : departure_from
+    AIRPORTS ||--o{ FLIGHTS : arrival_to
+    TICKET_FLIGHTS }|--|| BOARDING_PASSES : generates
+    FLIGHTS ||--o{ BOARDING_PASSES : has
+```
+
 _:memo: SQL запросы с решениями и результатами:_
 
 <table>
